@@ -38,11 +38,12 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
+  position: relative;
 }
 
-a:hover {
+/* a:hover {
   text-decoration: 2px underline white;
-}
+} */
 
 span {
   color: var(--primary-color);
@@ -304,6 +305,21 @@ button[type="submit"]::placeholder {
 
 #footer .footer .row-bottom ul li {
   padding: 0.5rem;
+}
+
+#footer a::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  height: 3px;
+  width: 0%;
+  left: 0;
+  bottom: -10px;
+  transition: 0.4s;
+}
+
+#footer a:hover::after {
+  width: 100%;
 }
 
 /* End Footer */
