@@ -152,6 +152,23 @@ h1:nth-child(2) {
   cursor: pointer;
 }
 
+#projects .image-container .card {
+  position: relative;
+  z-index: 1;
+}
+
+#projects .image-container .card::after {
+  content: "";
+  width: 100%;
+  height: 250px;
+  background-color: var(--background-color);
+  opacity: 0.9;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
 #projects .image-container img:hover {
   scale: 1.1;
 }
@@ -191,7 +208,7 @@ h1:nth-child(2) {
 }
 
 #about .languages .image-container img {
-  max-width: 400px;
+  max-width: 250px;
   width: 100%;
 }
 
@@ -199,11 +216,22 @@ h1:nth-child(2) {
   background-color: #fff;
   transition: all 0.3s ease;
   position: relative;
+  padding: 0 0;
+  margin-left: 7.5rem;
+  max-width: 250px;
+  justify-content: center;
+  align-items: center;
+}
+
+#about .languages .image-container .languages-card {
+  padding: 1rem 1rem;
+  margin-bottom: 2rem;
 }
 
 #about .languages .image-container .languages-card:hover {
   scale: 0.95;
 }
+
 /* End About */
 /* Contact */
 #contact .form {
@@ -307,6 +335,7 @@ button[type="submit"]::placeholder {
   padding: 0.5rem;
 }
 
+/* anchor tag underline effect */
 #footer a::after {
   content: "";
   position: absolute;
@@ -317,10 +346,10 @@ button[type="submit"]::placeholder {
   bottom: -10px;
   transition: 0.4s;
 }
-
 #footer a:hover::after {
   width: 100%;
 }
+/* ----------------------------- */
 
 /* End Footer */
 /* Keyframes */
