@@ -11,6 +11,7 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   user-select: none;
+  transition: all 300ms ease;
 }
 
 body {
@@ -83,14 +84,21 @@ button {
   animation: slideInFromLeft 1s ease;
 }
 
-.light-theme * {
+.theme * {
   color: #333;
   background-color: #fff;
 }
 
 /* Header */
-#header .nav-list button {
+#header .nav-bar .name a {
+  text-transform: none;
+}
+#header .nav-bar button {
+  padding: 0.5rem;
+  margin-left: 1rem;
   border-radius: 50%;
+  background-color: var(--primary-color);
+  border: var(--background-color) solid 2px;
   cursor: pointer;
 }
 
@@ -103,7 +111,6 @@ button {
   padding: 10px 20px;
   cursor: pointer;
 }
-/* End Header */
 
 #header .nav-list a {
   position: relative;
@@ -228,6 +235,8 @@ button {
 #header .hamburger .bar::before {
   bottom: 8px;
 }
+
+/* End Header */
 
 /* #header .hamburger.active .bar::before,
 #header .hamburger.active .bar::after {

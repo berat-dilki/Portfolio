@@ -4,6 +4,8 @@ const hamburger = document.querySelector(
 );
 const mobile_menu = document.querySelector(".header .nav-list ul");
 
+const menu_item = document.querySelector(".header .nav-list ul li a");
+
 function active() {
   mobile_menu.classList.toggle("active");
 }
@@ -11,5 +13,13 @@ function active() {
 // Theme switch
 const body = document.querySelector("body");
 function toggleTheme() {
-  body.classList.toggle("light-theme");
+  body.classList.toggle("theme");
 }
+
+// closes hamburger menu upon link click
+menu_item.forEach((item) => {
+  item.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    mobile_menu.classList.toggle("active");
+  });
+});
