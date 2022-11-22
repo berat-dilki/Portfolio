@@ -55,6 +55,10 @@ button {
   border: none;
 }
 
+.close {
+  left: 0%;
+}
+
 .card {
   padding: 2rem 2rem;
   background-color: #fff;
@@ -98,7 +102,7 @@ button {
   margin-left: 1rem;
   border-radius: 50%;
   background-color: var(--primary-color);
-  border: var(--background-color) solid 2px;
+  border: var(--primary-color) solid 2px;
   cursor: pointer;
 }
 
@@ -340,6 +344,11 @@ h1:nth-child(2) {
 
 /* End Projects */
 /* About */
+
+#about .about-info {
+  margin-top: 6.5rem;
+}
+
 #about .about-info h1 {
   text-align: center;
   font-size: 2rem;
@@ -493,8 +502,6 @@ button[type="submit"]::placeholder {
 }
 
 #footer .footer .row-top {
-  display: flex;
-  flex-direction: column;
   text-align: center;
   padding: 1.8rem;
 }
@@ -502,12 +509,6 @@ button[type="submit"]::placeholder {
 #footer .footer .row-top ul li {
   padding: 0.5rem;
   font-weight: 500;
-}
-
-#footer .footer .row-bottom {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
 }
 
 #footer .footer .row-bottom ul li {
