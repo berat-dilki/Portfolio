@@ -53,15 +53,12 @@ span {
 button {
   background-color: transparent;
   border: none;
-}
-
-.close {
   left: 0%;
 }
 
 .card {
   padding: 2rem 2rem;
-  background-color: #fff;
+  background-color: var(--background-color);
   color: #333;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
@@ -80,6 +77,10 @@ button {
   justify-content: flex-start;
 }
 
+.name-green {
+  color: var(--primary-color);
+}
+
 .green {
   background-color: var(--primary-color);
 }
@@ -87,11 +88,93 @@ button {
 .name {
   animation: slideInFromLeft 1s ease;
 }
-
+/* Light theme */
 .theme * {
   color: #333;
+}
+
+.theme {
   background-color: #fff;
 }
+
+.theme .card {
+  background-color: #fff;
+}
+
+.theme #header .nav-bar .brand h1 span {
+  color: var(--primary-color);
+}
+
+.theme #header .nav-bar .brand h1 a {
+  color: var(--primary-color);
+}
+
+/* .theme #header .nav-bar .brand h1 span {
+  color: var(--primary-color);
+} */
+
+.theme #header .header .nav-bar .brand button img {
+  background-color: var(--primary-color);
+}
+
+.theme #header .nav-list ul {
+  background-color: white;
+}
+
+.theme #hero .h1s span {
+  color: var(--primary-color);
+}
+
+.theme #hero .cta-container a:hover {
+  color: white;
+}
+
+.theme #contact form .card {
+  background-color: var(--primary-color);
+}
+
+.theme #contact .form .card h1 {
+  background-color: var(--primary-color);
+}
+
+.theme #contact .form .form-item {
+  background-color: var(--primary-color);
+}
+
+.theme #footer .footer .row-top {
+  background-color: var(--primary-color);
+}
+
+.theme #footer .footer .row-top a {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.theme #footer .footer .row-top li {
+  background-color: var(--primary-color);
+}
+
+.theme #footer .footer .row-bottom a {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.theme #footer .footer .row-bottom .social-icons a {
+  background-color: var(--primary-color);
+}
+
+.theme #footer .footer .row-bottom li {
+  background-color: var(--primary-color);
+}
+
+.theme #footer .social-icons .icon {
+  background-color: var(--primary-color);
+}
+
+.theme #footer .social-icons .icon a {
+  background-color: var(--primary-color);
+}
+/* End Light theme  */
 
 /* Header */
 #header .nav-bar .name a {
@@ -106,11 +189,6 @@ button {
   cursor: pointer;
 }
 
-#header .nav-list i {
-  background-color: #fff;
-  border: 2px black solid;
-  border-radius: 50%;
-}
 #header .nav-bar .brand h1 {
   padding: 10px 20px;
   cursor: pointer;
@@ -239,14 +317,8 @@ button {
 #header .hamburger .bar::before {
   bottom: 8px;
 }
-
 /* End Header */
 
-/* #header .hamburger.active .bar::before,
-#header .hamburger.active .bar::after {
-  top: 0;
-  bottom: 0;
-} */
 /* Hero */
 #hero .hero {
   max-width: 1200px;
@@ -266,13 +338,6 @@ button {
   line-height: 3rem;
   font-size: 2.5rem;
 }
-
-/* #hero .introduction h1:nth-child(1),
-h1:nth-child(2) {
-  background: linear-gradient(to right, #80808d, #8888a8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
 
 #hero .introduction .cta-container {
   margin-top: 3rem;
@@ -326,7 +391,7 @@ h1:nth-child(2) {
   z-index: 1;
 }
 
-#projects .image-container .card::after {
+/* #projects .image-container .card::after {
   content: "";
   width: 100%;
   height: 250px;
@@ -336,15 +401,14 @@ h1:nth-child(2) {
   left: 0;
   top: 0;
   z-index: -1;
-}
+} */
 
 #projects .image-container img:hover {
   scale: 1.1;
 }
-
 /* End Projects */
-/* About */
 
+/* About */
 #about .about-info {
   margin-top: 6.5rem;
 }
@@ -372,9 +436,8 @@ h1:nth-child(2) {
   display: flex;
   margin-left: 2.5rem;
   padding: 1.5rem;
-  border: 3px solid var(--primary-color);
   border-radius: 50%;
-  background-color: var(--background-color);
+  background-color: transparent;
 }
 
 #about .languages .languages-header {
@@ -387,9 +450,7 @@ h1:nth-child(2) {
 }
 
 #about .languages .image-container .languages-card {
-  background-color: #fff;
   transition: all 0.3s ease;
-  position: relative;
   padding: 0 0;
   margin-left: 7.5rem;
   max-width: 250px;
@@ -398,16 +459,8 @@ h1:nth-child(2) {
   z-index: 1;
 }
 
-#about .languages .image-container .languages-card::after {
-  content: "";
-  width: 100%;
-  height: 300px;
-  background-color: var(--background-color);
-  opacity: 0.9;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
+#about .theme .languages-card {
+  background-color: white;
 }
 
 #about .languages .image-container .languages-card {
@@ -418,8 +471,8 @@ h1:nth-child(2) {
 #about .languages .image-container .languages-card:hover {
   scale: 1.05;
 }
-
 /* End About */
+
 /* Contact */
 #contact .form {
   text-align: center;
@@ -552,7 +605,6 @@ button[type="submit"]::placeholder {
 #footer .social-icons .icon img:hover {
   scale: 1.1;
 }
-
 /* End Footer */
 
 /* Media Query for Desktop */

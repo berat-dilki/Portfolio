@@ -7,6 +7,7 @@ function active() {
 
 // Theme switch
 const body = document.querySelector("body");
+const ul = document.getElementById("ul");
 function toggleTheme() {
   body.classList.toggle("theme");
 }
@@ -23,9 +24,26 @@ menu_item.forEach((item) => {
 // Scroll effect for navbar background
 document.addEventListener("scroll", () => {
   let scroll_position = window.scrollY;
-  if (scroll_position > 250) {
+  if (scroll_position > 100) {
     header.style.backgroundColor = "#262931";
   } else {
     header.style.backgroundColor = "transparent";
   }
 });
+
+// scroll effect for navbar background (light mode)
+
+// const page = document.getElementById("body");
+// let lightMode = header.classlist.contains(".theme");
+// header.style.backgroundcolor = lightMode ? "#E5DDDB" : "#262931";
+
+// document.addEventListener("scroll", () => {
+//   let lightMode = header.classlist.contains(".theme");
+//   let scroll_position = window.scrollY;
+
+//   if (scroll_position > 100) {
+//     header.backgroundcolor = lightMode ? "#E5DDDB" : "#262931";
+//   } else {
+//     header.backgroundcolor = "transparent";
+//   }
+// });
