@@ -30,20 +30,3 @@ document.addEventListener("scroll", () => {
     header.style.backgroundColor = "transparent";
   }
 });
-
-// scroll effect for navbar background (light mode)
-
-// const page = document.getElementById("body");
-// let lightMode = header.classlist.contains(".theme");
-// header.style.backgroundcolor = lightMode ? "#E5DDDB" : "#262931";
-
-// document.addEventListener("scroll", () => {
-//   let lightMode = header.classlist.contains(".theme");
-//   let scroll_position = window.scrollY;
-
-//   if (scroll_position > 100) {
-//     header.backgroundcolor = lightMode ? "#E5DDDB" : "#262931";
-//   } else {
-//     header.backgroundcolor = "transparent";
-//   }
-// });

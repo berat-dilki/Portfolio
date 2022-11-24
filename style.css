@@ -93,6 +93,10 @@ button {
   color: #333;
 }
 
+.theme ul li a {
+  color: var(--primary-color);
+}
+
 .theme {
   background-color: #fff;
 }
@@ -127,6 +131,14 @@ button {
 
 .theme #hero .cta-container a:hover {
   color: white;
+}
+
+.theme #about .languages-card {
+  background-color: white;
+}
+
+.theme #about .about-info-image img {
+  border: none;
 }
 
 .theme #contact form .card {
@@ -380,6 +392,13 @@ button {
   padding: 2rem;
 }
 
+#projects .projects .info-para p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 1.7rem;
+}
+
 #projects .image-container img {
   width: 100%;
   transition: all 0.3s ease-in-out;
@@ -403,7 +422,7 @@ button {
   z-index: -1;
 } */
 
-#projects .image-container img:hover {
+#projects .image-container:hover {
   scale: 1.1;
 }
 /* End Projects */
@@ -433,10 +452,10 @@ button {
 
 #about .about-info-image img {
   width: 100%;
-  display: flex;
   margin-left: 2.5rem;
   padding: 1.5rem;
   border-radius: 50%;
+  border: 3px var(--primary-color) solid;
   background-color: transparent;
 }
 
@@ -457,10 +476,6 @@ button {
   justify-content: center;
   align-items: center;
   z-index: 1;
-}
-
-#about .theme .languages-card {
-  background-color: white;
 }
 
 #about .languages .image-container .languages-card {
@@ -607,9 +622,120 @@ button[type="submit"]::placeholder {
 }
 /* End Footer */
 
-/* Media Query for Desktop */
+/* Media Queries for Tablet 768px */
+@media only screen and (min-width: 768px) {
+  /* Hero */
+  p {
+    font-size: 1.3rem;
+  }
+
+  #hero .hero .introduction .h1s h1 {
+    font-size: 3.2rem;
+    padding: 0.5rem;
+  }
+
+  #hero .hero .introduction .cta-container {
+    margin-left: 1rem;
+  }
+
+  #hero .hero .introduction .cta-container a {
+    padding: 1.5rem;
+  }
+
+  #hero .hero .introduction .cta-container a {
+    font-size: 1.3rem;
+  }
+  /* End Hero */
+  /* Projects */
+  #projects .projects .projects-header h1 {
+    font-size: 3rem;
+  }
+
+  #projects .projects .info-para p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 2.1rem;
+  }
+
+  #projects .images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #projects .image-container .card {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  /* End Projects */
+
+  /* About */
+  #about .about-image-container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+
+  #about .about .about-info h1 {
+    font-size: 2.2rem;
+  }
+
+  #about .about-info-image img {
+    margin-left: 0;
+  }
+
+  #about .about .languages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #about .about .languages .languages-card {
+    margin: 0;
+  }
+
+  #about .about .languages .image-container {
+    padding: 1.5rem;
+  }
+  /* End About */
+
+  /* Contact */
+  #contact .form {
+    max-width: 600px;
+    max-height: 600px;
+    width: 100%;
+    height: 100%;
+  }
+
+  #contact .form h1 {
+    font-size: 2.3rem;
+  }
+
+  #contact .form .form-item input {
+    padding: 1.1rem;
+    padding-right: 9rem;
+  }
+
+  #contact .form .form-item button[type="submit"] {
+    padding: 1.3rem 3rem;
+  }
+
+  /* End Contact */
+
+  /* Footer */
+  #footer li {
+    font-size: 1.1rem;
+  }
+  /* End Footer */
+}
+
+/* Media Queries for Desktop 1200px*/
 @media only screen and (min-width: 1200px) {
-  /* header */
+  /* Header */
   #header .hamburger {
     display: none;
   }
@@ -622,19 +748,28 @@ button[type="submit"]::placeholder {
     background-color: transparent;
   }
 
+  #header .nav-list ul {
+    margin-right: 2rem;
+  }
+
+  .theme #header .nav-list ul {
+    background-color: transparent;
+  }
+
   #header .nav-list ul li {
     display: inline-block;
+  }
+
+  #header .nav-list ul li a {
+    font-size: 1.2rem;
+    padding-top: 1rem;
   }
 
   #header .nav-list ul a::after {
     display: none;
   }
 
-  #header .header {
-    background-color: transparent;
-  }
-
-  #header .nav-list a::after {
+  #header li .menuAnchor::after {
     content: "";
     position: absolute;
     background-color: #fff;
@@ -644,9 +779,80 @@ button[type="submit"]::placeholder {
     bottom: -10px;
     transition: 0.4s;
   }
-  #header a:hover::after {
+  #header li .menuAnchor:hover::after {
     width: 100%;
   }
+
+  #header .header {
+    background-color: transparent;
+  }
+  /* End header */
+
+  /* Hero */
+  #hero .hero .introduction .h1s {
+    margin-top: 10rem;
+  }
+  #hero .hero .introduction .h1s h1 {
+    font-size: 4rem;
+  }
+  /* End Hero */
+
+  /* Projects */
+  #projects .projects .projects-header h1 {
+    font-size: 3.2rem;
+  }
+
+  #projects .projects .info-para p {
+    margin-top: 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    text-align: center;
+    line-height: 2.1rem;
+  }
+
+  #projects .projects .images {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #projects .projects .images .image-container .card {
+    max-width: 500px;
+  }
+
+  #projects .projects .images .image-container .card .pj1 {
+    padding: 2.8rem 0;
+  }
+
+  #projects .projects .images .image-container .card .pj3 {
+    padding: 0.8rem 0;
+  }
+
+  #projects .projects .images .image-container .card img {
+    width: 300px;
+  }
+  /* End Projects */
+
+  /* About */
+
+  #about .about .about-info p {
+    font-size: 1.7rem;
+    margin: 0rem 15rem;
+  }
+
+  #about .about .about-image-container .about-info-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    margin: 0;
+  }
+
+  #about .about .languages .images-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* End About */
 }
 
 /* Keyframes */
