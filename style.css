@@ -378,6 +378,7 @@ button {
   padding: 0 50px;
   justify-content: center;
   display: block;
+  margin-bottom: 0;
 }
 
 #projects .projects .projects-header h1 {
@@ -397,6 +398,15 @@ button {
   font-size: 1.1rem;
   text-align: center;
   line-height: 1.7rem;
+}
+
+#projects .projects .info-para p::first-letter {
+  font-size: 1.8rem;
+  margin-right: 0.2rem;
+}
+
+#projects .projects .info-para p::first-letter {
+  font-size: rem;
 }
 
 #projects .image-container img {
@@ -453,8 +463,8 @@ button {
 #about .about-info-image img {
   width: 100%;
   margin-left: 2.5rem;
-  padding: 1.5rem;
-  border-radius: 50%;
+
+  border-radius: 30px;
   border: 3px var(--primary-color) solid;
   background-color: transparent;
 }
@@ -554,7 +564,7 @@ button {
 button[type="submit"]::placeholder {
   color: var(--background-color);
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-align: left;
 }
 /* End Contact */
@@ -658,6 +668,11 @@ button[type="submit"]::placeholder {
     line-height: 2.1rem;
   }
 
+  #projects .projects .info-para p::first-letter {
+    font-size: 1.8rem;
+    margin-right: 0.2rem;
+  }
+
   #projects .images {
     display: flex;
     flex-direction: column;
@@ -738,6 +753,20 @@ button[type="submit"]::placeholder {
   /* Header */
   #header .hamburger {
     display: none;
+  }
+
+  #header .header .nav-list ul li a::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s;
+  }
+  #header a:hover::after {
+    width: 100%;
   }
 
   #header .nav-list ul {
@@ -830,6 +859,7 @@ button[type="submit"]::placeholder {
   #projects .projects .images .image-container .card img {
     width: 300px;
   }
+
   /* End Projects */
 
   /* About */
@@ -850,6 +880,10 @@ button[type="submit"]::placeholder {
   #about .about .languages .images-container {
     display: flex;
     flex-direction: row;
+  }
+
+  #about .languages .image-container .languages-card .lg1 {
+    padding-bottom: 1.8rem;
   }
 
   /* End About */
