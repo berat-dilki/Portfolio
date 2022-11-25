@@ -133,6 +133,10 @@ button {
   color: white;
 }
 
+.theme #projects .projects span {
+  color: var(--primary-color);
+}
+
 .theme #about .languages-card {
   background-color: white;
 }
@@ -143,6 +147,17 @@ button {
 
 .theme #contact form .card {
   background-color: var(--primary-color);
+}
+
+.theme #contact form .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 206, 149, 0.15);
+  transform: rotate(-6deg);
+  border-radius: 10px;
+  z-index: -1;
+  opacity: 0.4;
 }
 
 .theme #contact .form .card h1 {
@@ -199,6 +214,10 @@ button {
   background-color: var(--primary-color);
   border: var(--primary-color) solid 2px;
   cursor: pointer;
+}
+
+#header .nav-bar button:hover {
+  scale: 1.1;
 }
 
 #header .nav-bar .brand h1 {
@@ -833,7 +852,7 @@ button[type="submit"]::placeholder {
 
   #projects .projects .info-para p {
     margin-top: 1rem;
-    margin: 1rem 0;
+    margin: 4rem 0;
     font-size: 1.7rem;
     text-align: center;
     line-height: 2.1rem;
@@ -883,10 +902,30 @@ button[type="submit"]::placeholder {
   }
 
   #about .languages .image-container .languages-card .lg1 {
-    padding-bottom: 1.8rem;
+    padding-bottom: 1.85rem;
+  }
+  /* End About */
+
+  /* Footer */
+  #footer .footer .row-top ul {
+    display: flex;
+    flex-direction: row;
   }
 
-  /* End About */
+  #footer .footer .row-top ul li {
+    padding: 2rem;
+    font-size: 1.3rem;
+  }
+
+  #footer .footer .row-bottom ul li {
+    font-size: 1.3rem;
+  }
+
+  #footer .footer .social-icons .icon img {
+    padding: 1rem;
+    margin: 0 2rem;
+  }
+  /* End Footer */
 }
 
 /* Keyframes */
