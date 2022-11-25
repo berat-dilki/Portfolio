@@ -800,6 +800,10 @@ button[type="submit"]::placeholder {
     margin-right: 2rem;
   }
 
+  #header .nav-list ul {
+    animation: slideInFromTop 0.5s ease-in;
+  }
+
   .theme #header .nav-list ul {
     background-color: transparent;
   }
@@ -811,6 +815,10 @@ button[type="submit"]::placeholder {
   #header .nav-list ul li a {
     font-size: 1.2rem;
     padding-top: 1rem;
+  }
+
+  #header .nav-list ul li a:hover {
+    scale: 0.9;
   }
 
   #header .nav-list ul a::after {
