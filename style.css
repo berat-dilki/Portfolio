@@ -663,8 +663,143 @@ button[type="submit"]::placeholder {
 }
 /* End Footer */
 
+/* Media Queries for 350px */
+@media screen and (min-width: 350px) {
+  /* Header */
+  #header .header .nav-bar .brand .name {
+    font-size: 1.5rem;
+    display: flex;
+  }
+
+  #header .header .nav-bar .brand button {
+    padding: 0.1rem;
+    width: 50px;
+    height: 40px;
+    justify-content: flex-end;
+  }
+  /* End Header */
+
+  /* Hero */
+  #hero .hero .introduction .h1s h1 {
+    font-size: 2rem;
+  }
+
+  #hero .hero .introduction .cta-container a {
+    padding: 1rem;
+  }
+  /* End Hero */
+
+  /* Projects */
+  #projects .projects .projects-header h1 {
+    font-size: 2rem;
+  }
+
+  #projects .projects .images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #projects .projects .images .image-container {
+    width: 300px;
+  }
+
+  #projects .projects .images .image-container .card {
+    padding-right: 0rem;
+  }
+
+  #projects .projects .images .image-container .card img {
+    width: 150px;
+  }
+
+  #projects .projects .info-para p {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  /* End Projects */
+
+  /* About */
+
+  #about .about .about-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about .about .about-info h1 {
+    font-size: 2rem;
+  }
+
+  #about .about .about-info p {
+    font-size: 1.2rem;
+  }
+
+  #about .about .about-info-image {
+    width: 300px;
+  }
+
+  #about .about .about-image-container {
+    justify-content: center;
+    align-items: center;
+    margin-right: 5.5rem;
+  }
+
+  #about .about .languages {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about .about .languages .images-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #about .about .languages .languages-card {
+    margin: 4rem;
+  }
+
+  /* End About */
+
+  /* Contact */
+  #contact .contact .form .card {
+    padding: 1.5rem;
+  }
+
+  #contact .contact .form .card h1 {
+    font-size: 1.5rem;
+  }
+
+  #contact .contact .form .card input {
+    padding: 1rem;
+  }
+
+  #contact .contact .form .card button[type="submit"] {
+    padding: 1rem;
+  }
+  /* End Contact */
+
+  /* Footer */
+  #footer .footer .row-top a {
+    font-size: 0.9rem;
+  }
+
+  #footer .footer .row-bottom a {
+    font-size: 0.9rem;
+  }
+
+  #footer .footer .social-icons .icon img {
+    padding: 0.5rem;
+  }
+
+  #footer .footer .social-icons .icon a {
+    padding: 0.2rem;
+  }
+  /* End Footer */
+}
+
 /* Media Queries for Mobile 576px */
 @media only screen and (min-width: 576px) {
+  /* Projects */
   #projects .projects .images .image-container {
     margin: 2.5rem;
   }
@@ -673,6 +808,9 @@ button[type="submit"]::placeholder {
     padding-bottom: 2rem;
   }
 
+  /* End Projects */
+
+  /* About */
   #about .about .about-image-container {
     margin-left: 2.8rem;
   }
@@ -680,6 +818,8 @@ button[type="submit"]::placeholder {
   #about .about .languages {
     margin-left: 3rem;
   }
+
+  /* End About */
 }
 
 /* Media Queries for Tablet 768px */
