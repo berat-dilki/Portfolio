@@ -680,6 +680,9 @@ button[type="submit"]::placeholder {
   /* End Header */
 
   /* Hero */
+  #hero .introduction {
+    margin-top: 5rem;
+  }
   #hero .hero .introduction .h1s h1 {
     font-size: 2rem;
   }
